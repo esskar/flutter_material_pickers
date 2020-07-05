@@ -132,8 +132,6 @@ class _TestPageState extends State<TestPage> {
                         buildPaletteRow(context),
                         Divider(),
                         buildSwatchRow(context),
-                        Divider(),
-                        buildFileRow(context),
                       ],
                     ),
                   ),
@@ -451,29 +449,6 @@ class _TestPageState extends State<TestPage> {
           width: 100.0,
           decoration: BoxDecoration(
             color: model.swatch,
-          ),
-        ),
-      ],
-    );
-  }
-
-  Row buildFileRow(BuildContext context) {
-    return Row(
-      children: <Widget>[
-        Container(
-          width: 150.0,
-          child: RaisedButton(
-            child: Text("File Picker"),
-            onPressed: () => showMaterialFilePicker(
-              context: context,
-              onChanged: (value) => setState(() => model.file = value),
-            ),
-          ),
-        ),
-        Expanded(
-          child: Text(
-            "${model.file.lengthInBytes} bytes",
-            textAlign: TextAlign.right,
           ),
         ),
       ],

@@ -9,7 +9,6 @@ dependencies:
   flutter_colorpicker: ^0.3.4
   intl: ^0.16.0
   meta: ^1.1.6
-  file_picker_cross: ^2.0.0
 
 dev_dependencies:
   flutter_test:
